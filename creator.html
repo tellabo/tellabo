@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Creator - Profile Input</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Creator Dashboard</h1>
-        <label>Rate (원고료): <input type="number" placeholder="500000"></label><br>
-        <label>Interested Brands: <input type="text" placeholder="e.g., Beauty, Lifestyle"></label><br>
-        <button onclick="location.href='match.html'">Browse Brands</button>
-    </div>
-</body>
-</html>
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creator Dashboard</title><link rel="stylesheet" href="assets/css/style.css"></head><body><div class="app">
+<header class="header"><h1 class="logo">Unfamous</h1></header>
+<h2>Creator Profile</h2>
+<form>
+  <label>Content Fee (원고료)</label>
+  <input type="number" placeholder="Your expected fee">
+  <label>Preferred Brands</label>
+  <input type="text" placeholder="e.g., Skincare, Lifestyle">
+  <button type="submit" onclick="event.preventDefault();location.href='match.html';">Browse Brands</button>
+</form>
+</div></body></html>
