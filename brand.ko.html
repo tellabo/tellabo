@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>브랜드 캠페인 등록</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <div><strong>Unfamous</strong> — TELLABO</div>
+    <button class="language-toggle" id="lang-toggle">EN</button>
+  </header>
+  <main>
+<h1>브랜드 캠페인을 생성하세요</h1><form>
+            <label style="display:block; margin:1rem 0 0.25rem;">브랜드 이름</label>
+            <input type="text" placeholder="알파 컴퍼니" style="width:100%; padding:0.5rem; border:1px solid #ccc; border-radius:6px;" />
+            
+            <label style="display:block; margin:1rem 0 0.25rem;">캠페인 예산 (KRW)</label>
+            <input type="text" placeholder="1000000" style="width:100%; padding:0.5rem; border:1px solid #ccc; border-radius:6px;" />
+            
+            <label style="display:block; margin:1rem 0 0.25rem;">선호 크리에이터 카테고리</label>
+            <input type="text" placeholder="패션, 테크" style="width:100%; padding:0.5rem; border:1px solid #ccc; border-radius:6px;" />
+            <br/><button style="margin-top:1rem;" onclick="event.preventDefault();location.href='matched.html';">매칭 시작</button></form>
+  </main>
+  <footer>
+    &copy; 2025 Unfamous Inc. All rights reserved.
+  </footer>
+  <script src="assets/js/lang/switch.js"></script>
+</body>
+</html>
