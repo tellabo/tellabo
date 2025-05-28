@@ -9,38 +9,39 @@
     :root {
       --primary-color: #1e3a8a;
       --primary-light: #3b82f6;
-      --text-color: #1f2937;
       --bg-color: #f9fafb;
+      --text-color: #1f2937;
     }
-
     * {
       font-family: 'Pretendard', sans-serif;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       background-color: var(--bg-color);
       color: var(--text-color);
     }
-
     header {
       background-color: var(--primary-color);
       color: white;
-      padding: 2rem 1rem;
+      padding: 1.5rem 1rem;
       text-align: center;
+      position: relative;
     }
-
-    header h1 {
-      font-size: 1.8rem;
+    .lang-switch {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
     }
-
-    header p {
-      font-size: 1rem;
-      margin-top: 0.5rem;
+    .lang-switch button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 0.95rem;
+      margin-left: 0.5rem;
+      cursor: pointer;
     }
-
     .cta-button {
       margin-top: 1rem;
       padding: 0.75rem 1.5rem;
@@ -50,49 +51,11 @@
       border-radius: 0.5rem;
       font-size: 1rem;
       cursor: pointer;
-      width: 100%;
-      max-width: 280px;
     }
-
     .section {
       padding: 2rem 1rem;
       text-align: center;
     }
-
-    .section h2 {
-      font-size: 1.5rem;
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-    }
-
-    .section p {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      text-align: left;
-      max-width: 320px;
-      margin: 0 auto;
-    }
-
-    ul li {
-      margin: 0.5rem 0;
-      font-size: 0.95rem;
-      padding-left: 1rem;
-      position: relative;
-    }
-
-    ul li::before {
-      content: '✔';
-      position: absolute;
-      left: 0;
-      color: var(--primary-light);
-    }
-
     footer {
       background-color: var(--primary-color);
       color: white;
@@ -100,43 +63,71 @@
       font-size: 0.85rem;
       padding: 1.5rem 1rem;
     }
-
-    @media (min-width: 640px) {
-      header h1 { font-size: 2.5rem; }
-      .section h2 { font-size: 2rem; }
-      .cta-button { font-size: 1.1rem; }
-    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>TELLABO</h1>
-    <p>The Creator Collaboration Lab by Unfamous Inc.</p>
-    <button class="cta-button">Get Started</button>
+    <div class="lang-switch">
+      <button onclick="setLang('ko')">ko</button> /
+      <button onclick="setLang('en')">en</button>
+    </div>
+    <h1 id="title">TELLABO</h1>
+    <p id="subtitle">The Creator Collaboration Lab by Unfamous Inc.</p>
+    <button class="cta-button" id="cta">Get Started</button>
   </header>
 
   <section class="section">
-    <h2>Smart Matching</h2>
-    <p>
+    <h2 id="howTitle">Smart Matching</h2>
+    <p id="howDesc">
       Just submit your URL and budget — TELLABO finds your perfect match.
     </p>
-    <ul>
-      <li>URL-based content intelligence</li>
-      <li>Mutual “Like” matching mechanism</li>
-      <li>Priority exposure for top contributors</li>
-    </ul>
   </section>
 
   <section class="section">
-    <h2>Need Help?</h2>
-    <p>Reach out anytime at<br><strong>contact@unfamous.kr</strong></p>
+    <h2 id="contactTitle">Need Help?</h2>
+    <p id="contactDesc">
+      Reach out anytime at<br><strong>contact@unfamous.kr</strong>
+    </p>
   </section>
 
   <footer>
     &copy; 2025 Unfamous Inc. | Service: TELLABO<br>
     All rights reserved.
   </footer>
+
+  <script>
+    const texts = {
+      en: {
+        title: "TELLABO",
+        subtitle: "The Creator Collaboration Lab by Unfamous Inc.",
+        cta: "Get Started",
+        howTitle: "Smart Matching",
+        howDesc: "Just submit your URL and budget — TELLABO finds your perfect match.",
+        contactTitle: "Need Help?",
+        contactDesc: "Reach out anytime at<br><strong>contact@unfamous.kr</strong>"
+      },
+      ko: {
+        title: "텔라보",
+        subtitle: "언페이머스가 만든 크리에이터 협업 실험실",
+        cta: "시작하기",
+        howTitle: "스마트 매칭",
+        howDesc: "URL과 예산만 입력하세요. 텔라보가 최적의 파트너를 찾아드립니다.",
+        contactTitle: "문의하기",
+        contactDesc: "언제든 연락 주세요<br><strong>contact@unfamous.kr</strong>"
+      }
+    };
+
+    function setLang(lang) {
+      document.getElementById("title").innerText = texts[lang].title;
+      document.getElementById("subtitle").innerText = texts[lang].subtitle;
+      document.getElementById("cta").innerText = texts[lang].cta;
+      document.getElementById("howTitle").innerText = texts[lang].howTitle;
+      document.getElementById("howDesc").innerText = texts[lang].howDesc;
+      document.getElementById("contactTitle").innerText = texts[lang].contactTitle;
+      document.getElementById("contactDesc").innerHTML = texts[lang].contactDesc;
+    }
+  </script>
 
 </body>
 </html>
