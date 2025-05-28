@@ -1,147 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>TELLABO : Brands & Creators Connect</title>
-  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
-  <style>
-    :root {
-      --primary-color: #1e3a8a;
-      --accent-color: #3b82f6;
-      --bg-color: #f9fafb;
-      --text-color: #1f2937;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Pretendard', sans-serif;
-    }
-    html, body {
-      height: 100%;
-      background: var(--bg-color);
-      color: var(--text-color);
-    }
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    header {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 2rem 1.5rem 1.5rem;
-      text-align: center;
-      position: relative;
-    }
-    header h1 {
-      font-size: 2rem;
-      font-weight: 700;
-    }
-    header p {
-      margin-top: 0.3rem;
-      font-size: 0.9rem;
-    }
-    .lang-switch {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-    }
-    .lang-switch button {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 0.85rem;
-      margin-left: 0.3rem;
-      cursor: pointer;
-    }
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem 1.5rem;
-      text-align: center;
-    }
-    main h2 {
-      font-size: 1.4rem;
-      color: var(--primary-color);
-      margin-bottom: 0.8rem;
-    }
-    main p {
-      font-size: 1rem;
-      line-height: 1.5;
-      margin-bottom: 1.5rem;
-    }
-    .cta-button {
-      background-color: var(--accent-color);
-      color: white;
-      border: none;
-      padding: 0.8rem 2rem;
-      font-size: 1rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .cta-button:hover {
-      background-color: #2563eb;
-    }
-    footer {
-      background-color: var(--primary-color);
-      color: white;
-      text-align: center;
-      font-size: 0.8rem;
-      padding: 1rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Unfamous - Start</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    <div class="lang-switch">
-      <button onclick="setLang('ko')">ko</button> / 
-      <button onclick="setLang('en')">en</button>
+    <div class="container">
+        <h1>Unfamous</h1>
+        <p>Who are you?</p>
+        <div class="button-group">
+            <a href="brand.html"><button>I'm a Brand</button></a>
+            <a href="creator.html"><button>I'm a Creator</button></a>
+        </div>
     </div>
-    <h1 id="title">TELLABO</h1>
-    <p id="subtitle">Tell Collaboration — Where Brands and Creators Connect</p>
-  </header>
-
-  <main>
-    <h2 id="howTitle">Unlimited Free Matching for Brands & Creators</h2>
-    <p id="howDesc">Just enter your URL and budget — our algorithm does the rest. Collaborate better. Smarter. Faster.</p>
-    <button class="cta-button" id="cta">Get Started</button>
-  </main>
-
-  <footer>
-    &copy; 2025 Unfamous Inc. | TELLABO<br>All rights reserved.
-  </footer>
-
-  <script>
-    const texts = {
-      en: {
-        title: "TELLABO",
-        subtitle: "Tell Collaboration — Brands and Creators Connect",
-        cta: "Get Started",
-        howTitle: "Unlimited Free Matching for Brands & Creators",
-        howDesc: "Just enter your URL and budget — our algorithm does the rest. Collaborate better. Smarter. Faster."
-      },
-      ko: {
-        title: "텔라보",
-        subtitle: "텔 콜라보레이션 - 브랜드와 크리에이터가 만나는 곳",
-        cta: "시작하기",
-        howTitle: "브랜드와 크리에이터 무제한 무료 매칭",
-        howDesc: "URL과 예산만 입력하세요. 나머지는 텔라보가 처리합니다. 더 나은 협업, 더 똑똑하게, 더 빠르게."
-      }
-    };
-
-    function setLang(lang) {
-      document.getElementById("title").innerText = texts[lang].title;
-      document.getElementById("subtitle").innerText = texts[lang].subtitle;
-      document.getElementById("cta").innerText = texts[lang].cta;
-      document.getElementById("howTitle").innerText = texts[lang].howTitle;
-      document.getElementById("howDesc").innerText = texts[lang].howDesc;
-    }
-  </script>
 </body>
 </html>
