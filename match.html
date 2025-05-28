@@ -3,20 +3,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Unfamous Swipe Match</title>
-  <link rel="stylesheet" href="assets/css/match.css" />
+  <title>Unfamous · Swipe Match</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/css/tailwind.css" rel="stylesheet" />
 </head>
-<body>
-  <div class="swipe-container">
-    <div class="card-stack" id="card-stack">
-      <!-- Cards will be inserted here dynamically -->
+<body class="bg-gray-100 text-gray-900">
+  <div class="max-w-md mx-auto mt-10">
+    <h1 class="text-2xl font-bold text-center mb-6">Swipe to Match</h1>
+    <div id="card-stack" class="relative h-[500px] overflow-hidden">
+      <!-- Cards will be loaded here -->
     </div>
-    <div class="action-buttons">
-      <button id="dislike">✖</button>
-      <button id="like">❤</button>
+    <div class="flex justify-center gap-10 mt-6">
+      <button id="dislike" class="w-14 h-14 bg-red-500 text-white rounded-full shadow-lg text-xl hover:bg-red-600">✖</button>
+      <button id="like" class="w-14 h-14 bg-green-500 text-white rounded-full shadow-lg text-xl hover:bg-green-600">❤</button>
     </div>
   </div>
-  <script src="assets/js/match-pro.js" defer></script>
+  <script src="assets/js/components/card.js" defer></script>
 </body>
 </html>
