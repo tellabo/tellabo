@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <title>TELLABO - Creator Collaboration Lab</title>
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
   <style>
@@ -11,7 +11,6 @@
       --accent-color: #3b82f6;
       --bg-color: #f9fafb;
       --text-color: #1f2937;
-      --iphone-height: 844px; /* iPhone 16 (Pro) viewport height approximation */
     }
     * {
       margin: 0;
@@ -20,15 +19,14 @@
       font-family: 'Pretendard', sans-serif;
     }
     html, body {
-      height: var(--iphone-height);
+      height: 100%;
       background: var(--bg-color);
       color: var(--text-color);
-      overflow: hidden;
     }
     body {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      min-height: 100vh;
     }
     header {
       background-color: var(--primary-color);
@@ -64,7 +62,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 1.5rem;
+      padding: 2rem 1.5rem;
       text-align: center;
     }
     main h2 {
@@ -106,12 +104,12 @@
       <button onclick="setLang('en')">en</button>
     </div>
     <h1 id="title">TELLABO</h1>
-    <p id="subtitle">Tell Collaboration : Unlimited Free AI Matching for Brands & Creators by Unfamous Inc.</p>
+    <p id="subtitle">Tell Collaboration — Where Brands and Creators Connect</p>
   </header>
 
   <main>
-    <h2 id="howTitle">Unlimited Free AI Matching for Brands & Creators</h2>
-    <p id="howDesc">Upload your URL and budget. Our algorithm does the rest. Collaborate better. Smarter. Faster.</p>
+    <h2 id="howTitle">Unlimited Free Matching for Brands & Creators</h2>
+    <p id="howDesc">Just enter your URL and budget — our algorithm does the rest. Collaborate better. Smarter. Faster.</p>
     <button class="cta-button" id="cta">Get Started</button>
   </main>
 
@@ -123,10 +121,10 @@
     const texts = {
       en: {
         title: "TELLABO",
-        subtitle: "Tell Collaboration : Brands and Creators Connect",
+        subtitle: "Tell Collaboration — Where Brands and Creators Connect",
         cta: "Get Started",
         howTitle: "Unlimited Free Matching for Brands & Creators",
-        howDesc: "Upload your URL and budget. Our algorithm does the rest. Collaborate better. Smarter. Faster."
+        howDesc: "Just enter your URL and budget — our algorithm does the rest. Collaborate better. Smarter. Faster."
       },
       ko: {
         title: "텔라보",
